@@ -56,21 +56,6 @@ OUTPUT JSON FORMAT:
 
 ACTIONS = ["SEND_DISCOUNT", "SEND_TUTORIAL", "ASK_INTEREST", "DO_NOTHING"]
 
-from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
-import os, json
-from langchain_core.messages import HumanMessage
-
-load_dotenv()
-
-llm = ChatOpenAI(
-    model="gpt-4o-mini",
-    temperature=0.2,
-    api_key=os.getenv("OPENAI_API_KEY")
-)
-
-ACTIONS = ["SEND_DISCOUNT", "SEND_TUTORIAL", "ASK_INTEREST", "DO_NOTHING"]
-
 def decision_agent(customer, memory):
     """
     Strategic Decision Agent.

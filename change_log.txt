@@ -1,0 +1,4 @@
+[2026-01-18] | FILE: src/simulation.py | CHANGE: Added aliases for simulate_user_behavior and evaluate_agent_action | REASON: Fix ImportError in app.py | ROLLBACK: Remove the aliases at the end of the file.
+[2026-01-18] | FILE: src/agent.py | CHANGE: Updated decision_agent to use JSON output, include last_action and memory hints in prompt | REASON: Ensure self-learning loop works and prevent invalid actions | ROLLBACK: Revert to simple string split implementation.
+[2026-01-18] | FILE: src/agent.py | CHANGE: Renamed to src/agents.py | REASON: Fix ImportError in app.py and src/simulation.py which expect agents.py | ROLLBACK: Rename back to agent.py.
+[2026-01-18] | FILE: src/simulation.py | CHANGE: Updated memory.get_relevant_strategy to memory.get_success_hints | REASON: Fix AttributeError due to method name mismatch | ROLLBACK: Revert to get_relevant_strategy.
