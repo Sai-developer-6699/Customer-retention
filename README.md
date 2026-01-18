@@ -1,0 +1,5 @@
+streamlit       # Dashboard UI
+langchain       # Agent orchestration
+langchain-openai # Or langchain-google-genai for Gemini
+pydantic        # Data validation for your agents
+python-dotenv   # Managing API Keys

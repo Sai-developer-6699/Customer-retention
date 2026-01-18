@@ -1,0 +1,78 @@
+personas =[
+    {
+    "id": "C001",
+        "name": "Student Sam",
+        "persona": "Price-sensitive, high initial engagement, drops off during exams.",
+        "engagement_score": 85,
+        "lifecycle_stage": "Onboarding",
+        "sensitivity": {"discount": 0.9, "content": 0.3},
+        "last_action": None,
+        "action_history": [],
+        "time_since_last_event": 0,
+        "not_interested_count": 0,
+        "status": "Active",
+        "history": ["Account Created"],
+        "segment": "Price-Sensitive"  # or High-Value / Churn-Risk / Upsell
+    },
+    {
+        "id": "C002",
+        "name": "Corporate Clara",
+        "persona": "High-value, busy professional, hates spam, needs deep technical value.",
+        "engagement_score": 40,
+        "lifecycle_stage": "Retention",
+        "sensitivity": {"discount": 0.1, "content": 0.8},
+        "last_action": None,
+        "action_history": [],
+        "time_since_last_event": 5,
+        "not_interested_count": 0,
+        "status": "Active",
+        "history": ["Logged in 5x", "API Setup"],
+        "segment": "High-Value"
+    },
+    {
+        "id": "C003",
+        "name": "Ghosting Greg",
+        "persona": "Former power user, suddenly silent for 10 days, high churn risk.",
+        "engagement_score": 25,
+        "lifecycle_stage": "Churn Risk",
+        "sensitivity": {"discount": 0.7, "content": 0.2},
+        "last_action": None,
+        "action_history": [],
+        "time_since_last_event": 10,
+        "not_interested_count": 0,
+        "status": "Active",
+        "history": ["Daily Use", "Stopped Access"],
+        "segment": "Churn-Risk"
+    },
+    {
+        "id": "C004",
+        "name": "Scale-up Sarah",
+        "persona": "Business owner hitting usage limits, needs pro features fast.",
+        "engagement_score": 90,
+        "lifecycle_stage": "Upsell Candidate",
+        "sensitivity": {"discount": 0.4, "content": 0.6},
+        "last_action": None,
+        "action_history": [],
+        "time_since_last_event": 1,
+        "not_interested_count": 0,
+        "status": "Active",
+        "history": ["Limit Warning Hit"],
+        "segment": "Upsell Candidate"
+    },
+    {
+        "id": "C005",
+        "name": "Bargain Betty",
+        "persona": "Only engages when a discount is active, very low brand loyalty.",
+        "engagement_score": 30,
+        "lifecycle_stage": "Churn Risk",
+        "sensitivity": {"discount": 0.99, "content": 0.05},
+        "last_action": None,
+        "action_history": [],
+        "time_since_last_event": 15,
+        "not_interested_count": 0,
+        "status": "Active",
+        "history": ["Coupon Used"],
+        "segment": "Price-Sensitive"
+    }
+
+]
