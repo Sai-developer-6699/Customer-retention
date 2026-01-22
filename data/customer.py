@@ -12,6 +12,7 @@ personas =[
         "not_interested_count": 0,
         "status": "Active",
         "history": ["Account Created"],
+        "discount_count": 0,
         "segment": "Price-Sensitive"  # or High-Value / Churn-Risk / Upsell
     },
     {
@@ -27,6 +28,7 @@ personas =[
         "not_interested_count": 0,
         "status": "Active",
         "history": ["Logged in 5x", "API Setup"],
+        "discount_count": 0,
         "segment": "High-Value"
     },
     {
@@ -42,6 +44,7 @@ personas =[
         "not_interested_count": 0,
         "status": "Active",
         "history": ["Daily Use", "Stopped Access"],
+        "discount_count": 0,
         "segment": "Churn-Risk"
     },
     {
@@ -57,6 +60,7 @@ personas =[
         "not_interested_count": 0,
         "status": "Active",
         "history": ["Limit Warning Hit"],
+        "discount_count": 0,
         "segment": "Upsell Candidate"
     },
     {
@@ -72,6 +76,7 @@ personas =[
         "not_interested_count": 0,
         "status": "Active",
         "history": ["Coupon Used"],
+        "discount_count": 0,
         "segment": "Price-Sensitive"
     }
 

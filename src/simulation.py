@@ -1,22 +1,18 @@
 import time
 from src.agents import behavior_analysis_agent
 
-def run_simulation_step(customer, decision_agent_chain, memory):
+def run_simulation_step(customer, memory):
     # STEP 1: OBSERVE
     analysis = behavior_analysis_agent(customer)
-    
-    # STEP 2: DECIDE (Call LLM)
-    decision = decision_agent_chain.run(
-        name=customer['name'],
-        persona=customer['persona'],
-        status_summary=analysis['summary'],
-        memory=memory.get_success_hints(customer)
-    )
-    
-    # STEP 3: ACT
-    # (Trigger a tool in tools.py based on decision['action'])
-    
-    return analysis, decision
+
+    # STEP 2: DECIDE (YOUR REAL AGENT)
+    decision = decision_agent(customer, memory)
+
+    # STEP 3: ACT + EVALUATE
+    impact = evaluate_outcome(customer, decision["action"], memory)
+
+    return analysis, decision, impact
+
 
 import random
 
@@ -48,6 +44,7 @@ def evaluate_outcome(customer, action, memory=None):
     # ACTION: SEND_DISCOUNT
     # ─────────────────────────────
     if action == "SEND_DISCOUNT":
+        customer["discount_count"] += 1
         history.append("Discount Email Sent")
 
         if customer["sensitivity"]["discount"] > 0.6:
@@ -109,13 +106,10 @@ def evaluate_outcome(customer, action, memory=None):
     # ─────────────────────────────
     if customer["not_interested_count"] >= 2:
         customer["status"] = "Churned"
-        history.append("Customer Marked as Churned")
-        impact = 0  # stop further decay
-
-    if customer["segment"] == "Price-Sensitive" and customer["not_interested_count"] >= 2:
-        customer["status"] = "Churned"
         customer["lifecycle_stage"] = "Churned"
         customer["history"].append("Agent stopped investing due to low ROI")
+        impact = 0
+
     # ─────────────────────────────
     # LEARNING (Strategy Memory)
     # ─────────────────────────────

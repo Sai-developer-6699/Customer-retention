@@ -75,7 +75,17 @@ def decision_agent(customer, memory):
             "action": "DO_NOTHING"
         }
 
+    MAX_DISCOUNTS = 2
+
     forbidden = memory.get_forbidden_actions(customer)
+
+    # HARD BUSINESS CONSTRAINT: Discount cap
+    if customer["discount_count"] >= MAX_DISCOUNTS:
+        forbidden.append("SEND_DISCOUNT")
+
+    # Force exploration if primary strategy failed
+    if "SEND_DISCOUNT" in forbidden and customer["segment"] == "Price-Sensitive":
+        pass  # ASK_INTEREST becomes the natural next option
 
     # Force action when inactive
     if customer["time_since_last_event"] >= 2 and "DO_NOTHING" not in forbidden:
