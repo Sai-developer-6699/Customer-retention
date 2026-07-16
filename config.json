@@ -1,0 +1,8 @@
+{
+  "llm_provider": "openai",
+  "model_name": "gpt-4o-mini",
+  "churn_score_threshold": 10,
+  "max_sms_limit": 2,
+  "max_discount_limit": 2,
+  "base_price_fluctuation_rate": 0.04
+}
