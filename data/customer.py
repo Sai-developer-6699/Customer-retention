@@ -1,6 +1,6 @@
-personas =[
+personas = [
     {
-    "id": "C001",
+        "id": "C001",
         "name": "Student Sam",
         "persona": "Price-sensitive, high initial engagement, drops off during exams.",
         "engagement_score": 85,
@@ -13,7 +13,11 @@ personas =[
         "status": "Active",
         "history": ["Account Created"],
         "discount_count": 0,
-        "segment": "Price-Sensitive"  # or High-Value / Churn-Risk / Upsell
+        "segment": "Price-Sensitive",
+        "product_id": "P001",  # Pro Subscription
+        "sms_count": 0,
+        "test_group": "Group A (AI-driven CLM)",
+        "clv": 29.0
     },
     {
         "id": "C002",
@@ -29,7 +33,11 @@ personas =[
         "status": "Active",
         "history": ["Logged in 5x", "API Setup"],
         "discount_count": 0,
-        "segment": "High-Value"
+        "segment": "High-Value",
+        "product_id": "P002",  # Enterprise Plan
+        "sms_count": 0,
+        "test_group": "Group A (AI-driven CLM)",
+        "clv": 99.0
     },
     {
         "id": "C003",
@@ -45,7 +53,11 @@ personas =[
         "status": "Active",
         "history": ["Daily Use", "Stopped Access"],
         "discount_count": 0,
-        "segment": "Churn-Risk"
+        "segment": "Churn-Risk",
+        "product_id": "P003",  # API Add-on
+        "sms_count": 0,
+        "test_group": "Group A (AI-driven CLM)",
+        "clv": 15.0
     },
     {
         "id": "C004",
@@ -61,7 +73,11 @@ personas =[
         "status": "Active",
         "history": ["Limit Warning Hit"],
         "discount_count": 0,
-        "segment": "Upsell Candidate"
+        "segment": "Upsell Candidate",
+        "product_id": "P001",  # Pro Subscription
+        "sms_count": 0,
+        "test_group": "Group B (Standard Rules)",
+        "clv": 29.0
     },
     {
         "id": "C005",
@@ -77,7 +93,10 @@ personas =[
         "status": "Active",
         "history": ["Coupon Used"],
         "discount_count": 0,
-        "segment": "Price-Sensitive"
+        "segment": "Price-Sensitive",
+        "product_id": "P001",  # Pro Subscription
+        "sms_count": 0,
+        "test_group": "Group B (Standard Rules)",
+        "clv": 29.0
     }
-
 ]
