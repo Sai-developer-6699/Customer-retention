@@ -30,13 +30,14 @@ class StrategyMemory:
         self.registry[key][action][status] += 1
 
         log_entry = (
-            f"Learned: {action} → {status} "
+            f"Learned: {action} -> {status} "
             f"(S:{self.registry[key][action]['SUCCESS']}, "
             f"F:{self.registry[key][action]['FAILED']}) "
             f"for {key}"
         )
         self.learning_logs.append(log_entry)
-        print(f"🧠 MEMORY UPDATED: {log_entry}")
+        # Use ASCII prefix to avoid UnicodeEncodeError on Windows (cp1252)
+        print(f"MEMORY UPDATED: {log_entry}")
 
     def get_forbidden_actions(self, customer):
         """
