@@ -1,0 +1,156 @@
+{
+  "day_count": 0,
+  "price_history": {
+    "Pro Subscription": [
+      29.0
+    ],
+    "Enterprise Plan": [
+      99.0
+    ],
+    "API Add-on": [
+      15.0
+    ],
+    "Pro + API Bundle": [
+      39.0
+    ]
+  },
+  "customers": [
+    {
+      "id": "C001",
+      "name": "Student Sam",
+      "persona": "Price-sensitive, high initial engagement, drops off during exams.",
+      "engagement_score": 85,
+      "lifecycle_stage": "Onboarding",
+      "sensitivity": {
+        "discount": 0.9,
+        "content": 0.3
+      },
+      "last_action": null,
+      "action_history": [],
+      "time_since_last_event": 0,
+      "not_interested_count": 0,
+      "status": "Active",
+      "history": [
+        "Account Created",
+        "Login"
+      ],
+      "discount_count": 0,
+      "segment": "Price-Sensitive",
+      "product_id": "P001",
+      "sms_count": 0,
+      "test_group": "Group A (AI-driven CLM)",
+      "clv": 29.0
+    },
+    {
+      "id": "C002",
+      "name": "Corporate Clara",
+      "persona": "High-value, busy professional, hates spam, needs deep technical value.",
+      "engagement_score": 40,
+      "lifecycle_stage": "Retention",
+      "sensitivity": {
+        "discount": 0.1,
+        "content": 0.8
+      },
+      "last_action": null,
+      "action_history": [],
+      "time_since_last_event": 6,
+      "not_interested_count": 0,
+      "status": "Active",
+      "history": [
+        "Logged in 5x",
+        "API Setup"
+      ],
+      "discount_count": 0,
+      "segment": "High-Value",
+      "product_id": "P002",
+      "sms_count": 0,
+      "test_group": "Group A (AI-driven CLM)",
+      "clv": 99.0
+    },
+    {
+      "id": "C003",
+      "name": "Ghosting Greg",
+      "persona": "Former power user, suddenly silent for 10 days, high churn risk.",
+      "engagement_score": 25,
+      "lifecycle_stage": "Churn Risk",
+      "sensitivity": {
+        "discount": 0.7,
+        "content": 0.2
+      },
+      "last_action": null,
+      "action_history": [],
+      "time_since_last_event": 11,
+      "not_interested_count": 0,
+      "status": "Active",
+      "history": [
+        "Daily Use",
+        "Stopped Access"
+      ],
+      "discount_count": 0,
+      "segment": "Churn-Risk",
+      "product_id": "P003",
+      "sms_count": 0,
+      "test_group": "Group A (AI-driven CLM)",
+      "clv": 15.0
+    },
+    {
+      "id": "C004",
+      "name": "Scale-up Sarah",
+      "persona": "Business owner hitting usage limits, needs pro features fast.",
+      "engagement_score": 90,
+      "lifecycle_stage": "Upsell Candidate",
+      "sensitivity": {
+        "discount": 0.4,
+        "content": 0.6
+      },
+      "last_action": null,
+      "action_history": [],
+      "time_since_last_event": 2,
+      "not_interested_count": 0,
+      "status": "Active",
+      "history": [
+        "Limit Warning Hit"
+      ],
+      "discount_count": 0,
+      "segment": "Upsell Candidate",
+      "product_id": "P001",
+      "sms_count": 0,
+      "test_group": "Group B (Standard Rules)",
+      "clv": 29.0
+    },
+    {
+      "id": "C005",
+      "name": "Bargain Betty",
+      "persona": "Only engages when a discount is active, very low brand loyalty.",
+      "engagement_score": 26,
+      "lifecycle_stage": "Churn Risk",
+      "sensitivity": {
+        "discount": 0.99,
+        "content": 0.05
+      },
+      "last_action": "DO_NOTHING",
+      "action_history": [
+        "DO_NOTHING"
+      ],
+      "time_since_last_event": 1,
+      "not_interested_count": 0,
+      "status": "Active",
+      "history": [
+        "Coupon Used",
+        "Feature Use",
+        "No Action Taken: System allowed customer to churn naturally"
+      ],
+      "discount_count": 0,
+      "segment": "Price-Sensitive",
+      "product_id": "P001",
+      "sms_count": 0,
+      "test_group": "Group B (Standard Rules)",
+      "clv": 57.48,
+      "messages": []
+    }
+  ],
+  "memory_registry": {},
+  "story_log": [],
+  "llm_provider": "openai",
+  "pending_approvals": []
+}
