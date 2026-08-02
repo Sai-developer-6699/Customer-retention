@@ -334,15 +334,15 @@ See `requirements.txt` for full list:
 
 This is a hackathon project. Suggestions and improvements are welcome!
 
-### Potential Enhancements
+### Completed Enhancements
 
-- [ ] Add more action types
-- [ ] Implement A/B testing for actions
-- [ ] Add customer lifetime value calculations
-- [ ] Export learning data to CSV/JSON
-- [ ] Add metrics dashboard with charts
-- [ ] Support for multiple LLM providers
-- [ ] Add configuration file for parameters
+- [x] **Add more action types**: Extended the action space to support specific channels: SMS coupons, SMS guides, Email discounts, Email tutorials, In-App modals, and Mobile push notifications.
+- [x] **Implement A/B testing for actions**: Created a baseline comparison between AI-driven CLM (Group A) and rules-based static outreach (Group B) with dynamic lift metrics.
+- [x] **Add customer lifetime value calculations**: Implemented dynamic CLV accumulation on each customer profile reflecting billing price walks and applied discount benefits.
+- [x] **Export learning data to CSV/JSON**: Added interactive download buttons in the dashboard sidebar to export Strategy Memory as JSON and Story Logs as CSV.
+- [x] **Add metrics dashboard with charts**: Integrated interactive subscription price trend line charts alongside channel-specific volume and success rate analytics.
+- [x] **Support for multiple LLM providers**: Added sidebar controls to switch the active OODA decision engine between OpenAI (`gpt-4o-mini`) and Google Gemini (`gemini-1.5-flash`).
+- [x] **Add configuration file for parameters**: Externalized parameters (fatigue limits, base price fluctuations, and churn scores) into `config.json`.
 
 ---
 
